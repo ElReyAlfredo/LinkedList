@@ -1,4 +1,4 @@
-Data Structures Study Repository
+#Data Structures Study Repository
 Hi Everyone 👋
 
 I'm studying data structures, and this is my personal repository. Here, you'll find a variety of methods and implementations for different types of data structures.
