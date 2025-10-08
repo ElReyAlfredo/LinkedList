@@ -14,8 +14,16 @@ simpleLinkedList.addLast("value 3");
 //console.log(simpleLinkedList.isEmpty());
 //console.log(simpleLinkedList.getHead());
 //console.log(simpleLinkedList.getTail());
-simpleLinkedList.displayList();
-simpleLinkedList.clearList();
+// simpleLinkedList.displayList();
+// simpleLinkedList.clearList();
 
 //INTERMEDIATE OPERATIONS
-//soon...
+
+simpleLinkedList.insertBefore("value 1", "value 0");
+simpleLinkedList.insertAfter("value 3", "value 4");
+simpleLinkedList.insertAt(1, "value 1");
+simpleLinkedList.deleteNode("value 1");
+simpleLinkedList.deleteAt(0);
+simpleLinkedList.getAt(3);
+simpleLinkedList.setAt(0, "Lamar");
+simpleLinkedList.displayList();

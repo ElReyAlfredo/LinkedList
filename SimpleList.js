@@ -127,7 +127,7 @@ export class SimpleLinkedList {
   //INTERMEDIATE OPERATIONS
   //Insert a node after some value
   insertAfter(targetValue, newValue) {
-    const newNode = new Node(newValue);
+    const newNode = new SimpleNode(newValue);
     if (this.head === null) {
       console.log("There is no value in this list");
       console.log("Adding new value");
@@ -148,7 +148,7 @@ export class SimpleLinkedList {
 
   //Insert a node before some value
   insertBefore(targetValue, newValue) {
-    const newNode = new Node(newValue);
+    const newNode = new SimpleNode(newValue);
     if (this.head === null) {
       console.log("This list is empty, cannot insert before.");
       return false;
@@ -172,7 +172,7 @@ export class SimpleLinkedList {
 
   //Insert a node in a specific index
   insertAt(index, value) {
-    const newNode = new Node(value);
+    const newNode = new SimpleNode(value);
 
     if (index < 0) {
       return false;
@@ -276,6 +276,10 @@ export class SimpleLinkedList {
 
     if (this.head === null) {
       return null;
+    }
+
+    if (index === 0) {
+      this.head.value = value;
     }
 
     let i = 0;

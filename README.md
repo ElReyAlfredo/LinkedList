@@ -31,7 +31,7 @@ More useful when you want to manipulate specific positions or values:
 - insertAfter(targetValue, newValue) Inserts a new node after the node with targetValue.
 - insertBefore(targetValue, newValue) Inserts a new node before the node with targetValue.
 - insertAt(index, value) Inserts a new node at a specific position.
-- deleteValue(value) Deletes the first node containing that value.
+- deleteNode(value) Deletes the first node containing that value.
 - deleteAt(index) Deletes the node at a specific position.
 - getAt(index) Returns the node at the specified position.
 - setAt(index, value) Modifies the value of the node at a certain position.
