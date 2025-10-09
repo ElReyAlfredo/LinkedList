@@ -119,11 +119,6 @@ export class SimpleLinkedList {
     }
   }
 
-  //Clear the entire list
-  clearList() {
-    this.head = null;
-  }
-
   //INTERMEDIATE OPERATIONS
   //Insert a node after some value
   insertAfter(targetValue, newValue) {
@@ -292,5 +287,151 @@ export class SimpleLinkedList {
       current = current.next;
       i++;
     }
+  }
+
+  //Advance Operations
+
+  //Reverse
+  reverse() {
+    // T O(n) M O(1)
+    if (this.head === null) {
+      return null;
+    }
+
+    let current = this.head;
+    let prev = null;
+    let nxt;
+
+    while (current) {
+      nxt = current.next;
+      current.next = prev;
+      prev = current;
+      current = nxt;
+    }
+    this.head = prev;
+
+    return prev;
+  }
+
+  size() {
+    let current = this.head;
+    let count = 0;
+    while (current) {
+      count++;
+      current = current.next;
+    }
+
+    return count;
+  }
+
+  //Clear the entire list
+  clearList() {
+    this.head = null;
+  }
+
+  contains(value) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
+  findMiddle() {
+    if (this.head === null) {
+      return false;
+    }
+
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    return slow;
+  }
+
+  getNthFromEnd(n) {
+    if (this.head === null) {
+      return null;
+    }
+
+    if (n < 1) {
+      return false;
+    }
+
+    let first = this.head;
+    let second = this.head;
+    for (let i = 0; i < n; i++) {
+      if (first === null) {
+        return null;
+      }
+      first = first.next;
+    }
+
+    while (first !== null) {
+      first = first.next;
+      second = second.next;
+    }
+
+    return second;
+  }
+
+  removeDuplicates() {
+    if (this.head === null) {
+      return null;
+    }
+
+    let current = this.head;
+    let prev = null;
+    let seen = new Set();
+
+    while (current !== null) {
+      if (seen.has(current.value)) {
+        prev.next = current.next;
+      } else {
+        seen.add(current.value);
+        prev = current;
+      }
+      current = current.next;
+    }
+
+    return this.head;
+  }
+
+  toArray() {
+    let array = [];
+    let current = this.head;
+
+    while (current !== null) {
+      array.push(current);
+      current = current.next;
+    }
+
+    return array;
+  }
+
+  hasCycle() {
+    if (this.head === null) {
+      return false;
+    }
+
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        return true;
+      }
+    }
+
+    return false;
   }
 }

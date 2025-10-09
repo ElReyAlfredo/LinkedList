@@ -36,6 +36,20 @@ More useful when you want to manipulate specific positions or values:
 - getAt(index) Returns the node at the specified position.
 - setAt(index, value) Modifies the value of the node at a certain position.
 
+### 🧠 Advance Operations
+
+Technical excercise
+
+- reverse() Reverse the order of the nodes.
+- size() / length() Count how many nodes there are.
+- clearList() Delete every node of the list.
+- contains(value) Returns true if the value are in the list.
+- findMiddle() Returns the middle node (useful with slow/fast pointers).
+- getNthFromEnd(n) Returns nth node from the end.
+- removeDuplicates() Delete every duplicate node.
+- toArray() Converts the list to a normal JavaScript array.
+- hasCycle() Detects if there is a cycle (if the list links to itself).
+
 ## Future Work 🚀
 
 We are working in new content!

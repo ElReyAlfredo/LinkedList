@@ -19,11 +19,16 @@ simpleLinkedList.addLast("value 3");
 
 //INTERMEDIATE OPERATIONS
 
-simpleLinkedList.insertBefore("value 1", "value 0");
-simpleLinkedList.insertAfter("value 3", "value 4");
-simpleLinkedList.insertAt(1, "value 1");
-simpleLinkedList.deleteNode("value 1");
-simpleLinkedList.deleteAt(0);
-simpleLinkedList.getAt(3);
-simpleLinkedList.setAt(0, "Lamar");
-simpleLinkedList.displayList();
+// simpleLinkedList.insertBefore("value 1", "value 0");
+// simpleLinkedList.insertAfter("value 3", "value 4");
+// simpleLinkedList.insertAt(1, "value 1");
+// simpleLinkedList.deleteNode("value 1");
+// simpleLinkedList.deleteAt(0);
+// simpleLinkedList.getAt(3);
+// simpleLinkedList.setAt(0, "Lamar");
+
+// simpleLinkedList.reverse();
+// console.log(simpleLinkedList.size());
+// console.log(simpleLinkedList.findMiddle());
+//simpleLinkedList.displayList();
+console.log(simpleLinkedList.getNthFromEnd(2));
