@@ -49,6 +49,9 @@ Technical excercise
 - removeDuplicates() Delete every duplicate node.
 - toArray() Converts the list to a normal JavaScript array.
 - hasCycle() Detects if there is a cycle (if the list links to itself).
+- toString() Returns a string of nodes ("A -> B -> C").
+- fromArray(array) Crea una list from an array.
+- clone() Create a separate copy of the list.
 
 ## Future Work 🚀
 

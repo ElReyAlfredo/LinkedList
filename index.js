@@ -3,9 +3,9 @@ import { SimpleLinkedList } from "./SimpleList.js";
 const simpleLinkedList = new SimpleLinkedList();
 
 // BASIC OPERATIONS
-simpleLinkedList.addBeginning("value 2");
-simpleLinkedList.addBeginning("value 1");
-simpleLinkedList.addLast("value 3");
+// simpleLinkedList.addBeginning("value 2");
+// simpleLinkedList.addBeginning("value 1");
+// simpleLinkedList.addLast("value 3");
 //simpleLinkedList.displayList();
 //console.log(simpleLinkedList.findNode("value 2"));
 //simpleLinkedList.deleteFirst();
@@ -30,5 +30,8 @@ simpleLinkedList.addLast("value 3");
 // simpleLinkedList.reverse();
 // console.log(simpleLinkedList.size());
 // console.log(simpleLinkedList.findMiddle());
-//simpleLinkedList.displayList();
-console.log(simpleLinkedList.getNthFromEnd(2));
+// console.log(simpleLinkedList.getNthFromEnd(2));
+// simpleLinkedList.toString();
+
+simpleLinkedList.fromArray([1, 2, 3, 4, 5]);
+simpleLinkedList.displayList();

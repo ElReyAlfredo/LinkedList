@@ -434,4 +434,68 @@ export class SimpleLinkedList {
 
     return false;
   }
+
+  toString() {
+    if (this.head === null) {
+      console.log("This list is empty.");
+      return null;
+    } else {
+      let current = this.head;
+      let result = "";
+      while (current) {
+        result += current.value;
+        if (current.next !== null) {
+          result += " -> ";
+        }
+        current = current.next;
+      }
+
+      console.log(result);
+
+      return true;
+    }
+  }
+
+  fromArray(array) {
+    if (!array || array.length === 0) {
+      return this;
+    } else {
+      for (let i = 0; i < array.length; i++) {
+        const newNode = new SimpleNode(array[i]);
+        newNode.next = this.head;
+        this.head = newNode;
+      }
+    }
+    return this;
+  }
+
+  clone() {
+    const clonedList = new this.constructor();
+
+    if (this.head === null) {
+      return clonedList;
+    }
+
+    let current = this.head;
+    let clonedTail = null;
+
+    while (current !== null) {
+      // Create a new node with the same value
+      const newNode = new SimpleNode(current.value);
+
+      // If is the first node
+      if (clonedList.head === null) {
+        clonedList.head = newNode;
+        clonedTail = newNode;
+      } else {
+        // Add to the tail of the clone lista
+        clonedTail.next = newNode;
+        clonedTail = newNode;
+      }
+
+      current = current.next;
+    }
+
+    return clonedList;
+  }
 }
